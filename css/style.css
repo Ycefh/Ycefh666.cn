@@ -1793,5 +1793,66 @@ body {
         font-size: 1.5rem;
         line-height: 35px;
     }
-}                                           
-                                                                                                            
+}
+                                           
+/* ============================================
+   Image Lightbox
+   ============================================ */
+
+ .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+ .lightbox-image {
+    max-width: 90%;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    opacity: 0.7;
+}
+
+/* Make gallery images clickable */
+
+.gallery .slide img {
+    cursor: pointer;
+}                                                                                                            

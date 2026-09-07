@@ -217,4 +217,63 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial setup
     updateSlider();
 
+
+// ============================================
+// Image Lightbox
+// ============================================
+
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+
+// Add click event to every gallery image
+slides.forEach(function (slide) {
+
+    const image = slide.querySelector("img");
+
+    image.addEventListener("click", function () {
+
+        // Use the clicked image
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+
+        // Show lightbox
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+
+// Close button
+lightboxClose.addEventListener("click", function () {
+
+    lightbox.classList.remove("active");
+
+});
+
+
+// Close when clicking the dark background
+lightbox.addEventListener("click", function (event) {
+
+    if (event.target === lightbox) {
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+
+// Close with Escape key
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
 });
