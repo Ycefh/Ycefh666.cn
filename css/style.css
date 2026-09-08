@@ -1,8 +1,8 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
+    --primary: #a616f9;
+    --primaryLight: #88ff43;
+    --secondary: #46ff43;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -59,7 +59,7 @@
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 0.25rem;
-      color: var(--primary);
+      color: #a616f9;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -243,7 +243,7 @@
   /* Large Desktop Parallax Effect - 100px */
   @media only screen and (min-width: 100rem) {
     #hero-1619 .cs-background {
-      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting7.jpg");
+      background: url("../images/Photo_0.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -482,6 +482,8 @@
     color: var(--headerColor);
     display: inline-block;
     position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-li-link:before {
     /* active state underline */
@@ -494,9 +496,13 @@
     position: absolute;
     bottom: -0.125rem;
     left: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-li-link.cs-active:before {
     display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-button-solid {
     display: none;
@@ -574,6 +580,8 @@
     color: var(--bodyTextColor);
     display: block;
     position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-li-link:hover:before {
     width: 100%;
@@ -612,6 +620,8 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-button-solid:before {
     content: "";
@@ -625,6 +635,8 @@
     left: 0;
     z-index: -1;
     transition: width 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
   }
   #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
@@ -881,7 +893,7 @@
     /* prevents padding and border from affecting height and width */
     /* 16px - 32px */
     padding: clamp(1rem, 4.5vw, 2rem);
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 0.5rem;
     box-sizing: border-box;
     display: flex;
@@ -899,6 +911,8 @@
   #services-2051 .cs-flex {
     display: flex;
     flex-direction: column;
+
+
   }
   #services-2051 .cs-h3 {
     /* 20px - 25px */
@@ -1028,18 +1042,18 @@
 }
 
 #services-2051 .cs-button-solid {
-  color:#fff
+  color:#ffffff
   
 }
 #services-2051 .cs-button-solid {
-    background-color: #f97316;
+  
     color: #fff;
     border-radius: 0.5rem;
 }
 #services-2051 .cs-topper{
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ff7300
+  color: #a85fff;
   
 }
 .cs-button-6 {
@@ -1055,7 +1069,7 @@
     padding: 0 1.5rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #ffffff;
     border: 2px solid #1a1a1a;
     display: inline-flex;
     align-items: center;
@@ -1069,7 +1083,7 @@
     content: "";
     width: 0.375rem;
     height: 100%;
-    background: #1a1a1a;
+    background: #ff9900;
     opacity: 1;
     position: absolute;
     display: block;
@@ -1855,4 +1869,27 @@ body {
 
 .gallery .slide img {
     cursor: pointer;
-}                                                                                                            
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+.contact-highlight {
+    animation: contactHighlight 1.5s ease;
+}
+
+@keyframes contactHighlight {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

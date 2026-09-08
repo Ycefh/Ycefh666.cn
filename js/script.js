@@ -276,4 +276,39 @@ document.addEventListener("keydown", function (event) {
     }
 
 });
+// ============================================
+// Contact Us Smooth Scroll
+// ============================================
+
+// ============================================
+// Contact Us Smooth Scroll
+// ============================================
+
+const contactButton = document.querySelector("#contact-button");
+const contactSection = document.querySelector("#cta-51");
+
+if (contactButton && contactSection) {
+
+    contactButton.addEventListener("click", function (event) {
+
+        // Prevent the default anchor jump
+        event.preventDefault();
+
+        // Smoothly scroll to the CTA section
+        contactSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        // Add visual feedback
+        contactSection.classList.add("contact-highlight");
+
+        // Remove the highlight after 1.5 seconds
+        setTimeout(function () {
+            contactSection.classList.remove("contact-highlight");
+        }, 1500);
+
+    });
+
+}
 });
